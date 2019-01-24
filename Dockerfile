@@ -1,7 +1,7 @@
 FROM node:alpine AS builder
 WORKDIR '/app'
 COPY package.json .
-RUN npm install --registry http://10.10.82.155:8787/repository/npm-group/
+RUN npm install
 COPY . .
 RUN npm run build
 
